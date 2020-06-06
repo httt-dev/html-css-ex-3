@@ -1,0 +1,403 @@
+:root {
+  --hover-color: orange;
+}
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 5rem;
+  box-sizing: border-box;
+  background-color: #eaedf2;
+}
+
+/* Bai 1  */
+
+.dropdown {
+  width: 30rem;
+  position: relative;
+}
+
+.dropdown-select {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  width: 100%;
+  display: block;
+  text-align: right;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #de4a3e;
+  color: white;
+  font-weight: 800;
+}
+
+.select {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+.dropdown-select > i {
+  position: absolute;
+  top: 0.2rem;
+  right: 2rem;
+}
+.dropdown:hover .select_ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.select_ul {
+  border-radius: 0.4rem;
+  background-color: white;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  text-transform: uppercase;
+  background-color: #de4a3e;
+  color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown-list__item {
+  position: relative;
+  padding: 1rem;
+  font-size: 1.6rem;
+  width: 90%;
+}
+
+.select_ul li:hover {
+  background: #c64236;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.select_ul:before,
+.select_ul:after {
+  content: "";
+  position: absolute;
+  border: 1rem solid transparent;
+  border-top: 0;
+  left: 1rem;
+  top: -1rem;
+}
+
+.select_ul:before {
+  top: -0.9rem;
+  border-bottom-color: #de4a3e;
+}
+.select_ul:after {
+  top: -1rem;
+  border-bottom-color: #de4a3e;
+  z-index: -1;
+}
+.dropdown-list__item > i {
+  position: absolute;
+  top: 0.2rem;
+}
+
+/* Bai 2 */
+.search {
+  margin-top: 20rem;
+  width: 100%;
+  height: 8rem;
+  position: relative;
+}
+
+.search-text {
+  height: 100%;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+  font-size: 3rem;
+  padding-left: 3rem;
+}
+
+.search-btn {
+  width: 6rem;
+  height: 100%;
+  border: 0px solid #5aeed1;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: -0.4rem;
+  background-image: linear-gradient(to right, #5aeed1, #5aeed1);
+  box-shadow: -0.1rem 0.1rem 1.5rem 0 #5aeed1;
+}
+
+.search-btn:focus {
+  outline: 0;
+}
+
+/* Bai 3
+   */
+
+.form {
+  margin-top: 4rem;
+  width: 68rem;
+}
+
+.form-caption {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-top: 1rem;
+  background-color: rgb(250, 246, 246);
+  border: 1px solid rgb(211, 208, 208);
+  font-size: 3rem;
+  border-radius: 4px;
+}
+
+.action-area {
+  width: 100%;
+}
+.action-area__term {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+.action-area__link {
+  font-size: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-decoration: none;
+}
+
+input:focus , textarea:focus{
+  outline: none;
+  border: 1px solid #719ECE;
+
+} 
+
+.btn {
+  cursor: pointer;
+  width: 20rem;
+  height: 6rem;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: 0;
+  text-transform: capitalize;
+  color: white;
+  margin: 2rem;
+  border-radius: 0.6rem;
+  letter-spacing: 0.4rem;
+  box-sizing: border-box;
+  transition: 0.5s linear;
+  vertical-align: middle;
+  margin-left: 18rem;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(20, 36, 187),
+    rgb(20, 36, 187)
+  );
+  color: var(--hover-color);
+  transition: 0.6s linear;
+}
+
+.btn--blue {
+  padding-right: 10rem;
+  background-image: linear-gradient(to right, #3d43ff, #3d43ff);
+}
+
+.arrow-right {
+  position: relative;
+  left: -6rem;
+  color: white;
+  vertical-align: middle;
+}
+/* Bai 4  */
+
+.toggle {
+  margin-top: 10rem;
+}
+.switch {
+  display: inline-block;
+  height: 4rem;
+  position: relative;
+  width: 10rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 3.2rem;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 3.2rem;
+}
+
+input:checked + .slider {
+  background-color: #7f6cfa;
+}
+
+input:checked + .slider:before {
+  transform: translateX(6rem);
+}
+
+.slider.round {
+  border-radius: 4rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Bai 5  */
+.btn-modal{
+    margin-top: 5rem;
+    cursor: pointer;
+    width: 24rem;
+    height: 6rem;
+    text-align: center;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+    margin: 6rem;
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    letter-spacing: .4rem;
+    box-sizing: border-box;
+    transition: 0.5s linear;
+    background-image: linear-gradient(to right , #ffd598 , #fca261);
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  z-index: 10;
+}
+
+
+.modal-content {
+  border-radius: 0.4rem;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vh;
+  height: 60vh;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+}
+.close {
+  cursor: pointer;
+}
+.close:before,
+.close:after {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  border-top: 0.1rem solid #000;
+  position: absolute;
+  top: 1rem;
+  right: -0.8rem;
+  transform:rotate(-45deg);
+}
+.close:before{
+  right: 0.6rem;
+  transform:rotate(45deg);
+}
+.close:hover{
+  opacity: 0.5;
+}
+
+/* Bai 6 */
+.video-thumbnail {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  display: inline-block;
+
+  background-image: url("https://www.mu.my/files/uploads/lms-training-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video-thumbnail::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  content: "\f144";
+  font-family: "FontAwesome";
+  font-size: 60px;
+  color: #fff;
+  opacity: 0.8;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-thumbnail:hover::before {
+  color: #eee;
+}
+/* Bai 7 */
+/* animation basic */
+.animation {
+  width: 40rem;
+  height: 30rem;
+  animation: pulse 5s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: #001f3f;
+  }
+  100% {
+    background-color: greenyellow;
+  }
+}
+

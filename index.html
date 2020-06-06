@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA_Compatible" content="ie=edge" />
+  <title>Bài tập 3</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <!-- 1. Hoàn thành UI này, áp dụng kiến thức đã học như position, before after để tạo hình tam giác, lưu ý khi rê chuột vào item thì có đổi màu nền như hình luôn nha, gợi ý: có thể google "css triangle" để xem cách làm hình tam giác, dropdown rê chuột vào mới hiện, có thể tham khảo video trên youtube của anh nha: https://static.collectui.com/shots/1436570/dropdown-menu-large -->
+
+  <div class="dropdown">
+    <div class="dropdown-select">
+      <span class="select">Call to action</span>
+      <i class="fa fa-caret-down fa-2x icon"></i>
+    </div>
+    <ul class="select_ul">
+      <li>
+        <div class="dropdown-list__item">
+          <span class="select">New Project</span>
+          <i class="fa fa-plus-circle fa-2x"></i>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown-list__item">
+          <span class="select">settings</span>
+          <i class="fa fa-cog fa-2x"></i>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown-list__item">
+          <span class="select"> logout</span>
+          <i class="fa fa-sign-out fa-2x"></i>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown-list__item">
+          <span class="select">View profile</span>
+          <i class="fa fa-user fa-2x"></i>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  </div>
+  <!-- Bai 2 -->
+  <div class="search">
+    <input type="text" class="search-text" placeholder="Search">
+    <button type="submit" class="search-btn">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+
+  <!-- 3. Tương tự bài 2 làm form này, lưu ý chỉ làm phần Form như fullname, email, messsage, custom checkbox accept term và nút send với icon -> : https://cdn.dribbble.com/users/491515/screenshots/5699033/attachments/1230977/attach.png -->
+
+  <div class="form">
+    <label class="form-caption" for="fullname" >Full name</label>
+    <input type="text" class="form-group" id="fullname">
+    <label for="email" class="form-caption">Email address</label>
+    <input type="text" class="form-group" id="email">
+    <label for="message" class="form-caption">Message</label>
+    <textarea class="form-group" id="message" id="message" cols="40" rows="8"></textarea>
+
+    <div class="action-area">
+      <input type="checkbox" id="term" class="action-area__term" value="Accept terms& conditions" />
+      <span class="action-area__link">Accept&nbsp;</span><a class="action-area__link" href="">terms& conditions</a>
+
+      <button class="btn btn--blue">
+        Send
+      </button>
+      <i class="fa fa-long-arrow-right fa-2x arrow-right" aria-hidden="true"></i>
+
+    </div>
+
+  </div>
+
+  <!-- 4. Tạo ra custom toggle checkbox chỗ notification thôi nha, chỗ nút màu tím màu xám ý, nhấn là chạy qua chạy lại, có thể coi video youtube của anh để tham khảo cách làm: https://static.collectui.com/shots/2923094/day-63-dropdown-large -->
+
+  <div class="toggle">
+    <label class="switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+  </div>
+
+  <!-- 5. Tạo ra một modal đơn giản, với position fixed, nền đen mờ phía sau, còn nội dung thì sao cũng được nhưng màu nền phải là màu trắng như UI: https://static.collectui.com/shots/3011626/applying-for-a-job-large -->
+
+  <button class="btn-modal" id="btnOpen">Open Dialog</button>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <header>
+        <h1>Modal Window
+          <span class="close"></span>
+        </h1>
+        <p>To close dialog please click deside modal</p>
+      </header>
+    </div>
+  </div>
+
+  <!-- 6. Mọi người chắc thấy tấm hình các anh chàng và cô gái cười chứ, trên tấm hình đó có một lớp mờ phủ lên và có nút play nằm trên lớp mờ đó, sử dụng position + z-index để làm nhé, làm tấm hình có lớp phủ lên và icon play thôi nha: https://static.collectui.com/shots/2873653/landing-page-kibo-lotto-large -->
+  <div class="video-thumbnail">
+  </div>
+
+  <!-- 7. Tự tìm hiểu làm một animation đơn giản, có thể coi video học để xem cách làm hoặc google nha -->
+
+  <div class="animation"></div>
+
+</body>
+
+<script>
+  let modal = document.getElementById("modal");
+  let btn = document.getElementById("btnOpen");
+  let close = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    console.log("btn onclick")
+    modal.style.display = "block";
+  }
+
+  close.onclick = function(){
+    modal.style.display ="none";
+  }
+  window.onclick = function(event){
+    if(event.target == modal){
+      modal.style.display ="none";
+    }
+  }
+
+</script>
+</html>
